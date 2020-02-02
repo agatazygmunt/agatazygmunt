@@ -3,10 +3,11 @@ package zadanie6;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import zadanie5.Plec;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalDouble;
 
 @ToString
 @Getter
@@ -31,5 +32,17 @@ public class Student {
     public void dodajOcene (Double ocena){
         this.oceny.add(ocena);
     }
+public Optional<Double> obliczSrednia(){
+        double sum =0.0;
+        for (Double ocena:oceny){
+            sum+=ocena;
+        }
+        if (oceny.size()>0){
+            return Optional.of(sum/oceny.size());
+        }return Optional.empty();
+}
 
+    public OptionalDouble obliczSrednia2() {
+        return oceny.stream().mapToDouble(aDouble -> aDouble).average(); // OptionalDouble
+    }
 }

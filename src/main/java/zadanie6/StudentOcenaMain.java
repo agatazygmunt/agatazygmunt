@@ -26,20 +26,22 @@ package zadanie6;
 //        - dodanie/usuwanie ocen studentom
 //        Wszystkie polecenia zrealizowane jako VarArgs.
 
-import zadanie5.Plec;
-import zadanie5.Student;
+
+import zadanie6.Student;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class StudentOcenaMain {
     public static void main(String[] args) {
 
 
     List<Student> listaStudentow = new ArrayList<>();
-//                listaStudentow.add(new Student("126566", "Agata", "Zygmunt"));
-//                listaStudentow.add(new Student("126676", "piotr", "Zygmunt"));
-//                listaStudentow.add(new Student("145566", "marta", "Zygmunt"));
-//                listaStudentow.add(new Student("1269836", "marcin", "Zygmunt"));
-
+                listaStudentow.add(new Student("126566", "Agata", "Zygmunt"));
+                listaStudentow.add(new Student("126676", "piotr", "Zygmunt"));
+                listaStudentow.add(new Student("145566", "marta", "Zygmunt"));
+                listaStudentow.add(new Student("1269836", "marcin", "Zygmunt"));
+        Scanner scanner = new Scanner(System.in);
+        String numerIndexu = scanner.next();
 }}
